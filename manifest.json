@@ -19,7 +19,7 @@
   "content_scripts" : [{
     "matches" : [ "*"],
     "js" : ["script.js"]
-  }]
+  }],
   "web_accessible_resources": [
     "JokLogo.png"
   ],
