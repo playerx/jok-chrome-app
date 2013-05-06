@@ -5,8 +5,8 @@
   "default_locale": "en",
   "app": {
     "launch": {
-      "web_url": "http://jok.ge/?source=chromeApp",
-     "container":"tab"
+      "local_path": "index.html",
+      "container":"tab"
     }
   },
   "icons": {
@@ -17,7 +17,7 @@
     "notifications"
   ],
   "content_scripts" : [{
-    "matches" : [ "*"],
+    "matches" : [ "https://*/"],
     "js" : ["script.js"]
   }],
   "web_accessible_resources": [
