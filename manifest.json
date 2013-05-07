@@ -1,7 +1,7 @@
 {
   "name": "Jok",
   "description": "It's jok time :)",
-  "version": "1.4",
+  "version": "1.5",
   "default_locale": "en",
   "app": {
     "launch": {
@@ -10,6 +10,7 @@
     }
   },
   "icons": {
+    "16": "JokLogo16.png",
     "128": "JokLogo.png"
   },
   "permissions": [
@@ -17,11 +18,11 @@
     "notifications"
   ],
   "content_scripts" : [{
-    "matches" : [ "https://*/"],
+    "matches" : [ "http://*/*", "https://*/*"],
     "js" : ["script.js"]
   }],
   "web_accessible_resources": [
     "JokLogo.png"
   ],
-  "manifest_version": 4
+  "manifest_version": 2
 }

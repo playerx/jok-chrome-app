@@ -11,10 +11,13 @@ try {
         var container = document.getElementById('pagelet_ego_pane_w').children[0].children[0];
         var lastChild = container.lastChild
         var node = document.createElement('div');
-        node.innerHTML = '<iframe src="http://localhost:9000/Portal/FacebookAdsFrame" style="border: 0px; width: 244px; overflow: hidden;"></iframe>';
+        node.innerHTML = '<iframe src="https://jok.ge/Ads/FacebookFrame" style="border: 0px; width: 244px; overflow: hidden; border-bottom: 1px solid #e9e9e9; border-top: 1px solid #e9e9e9;"></iframe>';
 
         container.insertBefore(node, lastChild);
-        //chrome.extension.sendRequest(request, function(response) {});
+    }
+
+    if (window.location.host == 'www.odnoklassniki.ru') {
+        document.getElementById('fthColWrp').innerHTML = '<iframe src="https://jok.ge/Ads/OdnoklasnikiFrame" style="border: 0px; width: 240px; overflow: hidden; border-bottom: 1px solid #e9e9e9; border-top: 1px solid #e9e9e9;"></iframe>' + document.getElementById('fthColWrp').innerHTML;
     }
 }
 catch (err) {
